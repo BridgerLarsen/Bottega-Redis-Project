@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Redis Link Shortener</title>
+
+    <style>
+        body {
+            margin: 0;
+            display: grid;
+            align-items: center;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .navbar {
+            background-color: #00BFFF;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            justify-items: center;
+            height: 8vh;
+        }
+
+        .left-side a {
+            font-size: 1.8em;
+            color: white;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .right-side {
+            margin-left: 265px;
+        }
+
+        .right-side a {
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="left-side">
+            <a href="/">Redus Link Shortener</a>
+        </div>
+
+        <div class="right-side">
+            <a href="/viewAllLinks">All Links</a>
+        </div>
+    </div>
+
+    {{{body}}}
+</body>
+</html>

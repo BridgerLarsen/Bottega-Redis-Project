@@ -1,0 +1,49 @@
+<style>
+    .links-page-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .links-page-container .header {
+        font-size: 1.5em;
+    }
+
+    .links-wrapper .links {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .links-wrapper .links a {
+        margin-top: 5px;
+        text-decoration: none;
+        color: #00BFFF;
+        font-size: 1.1em;
+    }
+</style>
+
+<div class="links-page-wrapper">
+    <div class="links-page-container">
+        <div class="header">
+            <h1>Links</h1>
+        </div>
+            
+        <div class="links-wrapper">
+            {{#if link}}
+                <div class="links">
+                    <a href="{{link.fullLink1}}" target="_blank">{{link.shortenedLink1}}</a>
+                    <a href="{{link.fullLink2}}" target="_blank">{{link.shortenedLink2}}</a>
+                    <a href="{{link.fullLink3}}" target="_blank">{{link.shortenedLink3}}</a>
+                    <a href="{{link.fullLink4}}" target="_blank">{{link.shortenedLink4}}</a>
+                    <a href="{{link.fullLink5}}" target="_blank">{{link.shortenedLink5}}</a>
+                    <a href="{{link.fullLink6}}" target="_blank">{{link.shortenedLink6}}</a>
+                </div>
+        {{else}}
+            <h2>No Links at the moment...</h2>
+        {{/if}}
+        </div>
+    </div>
+
+    <div class="filler"></div>
+</div>

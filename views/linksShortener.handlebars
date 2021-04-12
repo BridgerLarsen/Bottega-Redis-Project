@@ -1,0 +1,56 @@
+<style>
+    .insert-link-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-wrapper {
+        display: grid;
+        grid-gap: 15px;
+        width: 1300px;
+        margin-top: 25px;
+    }
+
+    .inputs input {
+        padding: 15px 0px 10px 0px;
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid black;
+    }
+
+    .shorten-link-btn button {
+        padding: 15px 25px;
+        background-color: orange;
+        border: 1.5px solid darkorange;
+        border-radius: 5px;
+    }
+
+    .new-shortened-url a {
+        color: #00BFFF;
+        text-decoration: none;
+    }
+</style>
+
+<div class="insert-link-container">
+    <form method="POST" action="/">
+        <div class="form-wrapper">
+            <div class="inputs">
+                <input type="text" name="id" placeholder="ID" />
+                <input type="text" name="URL" placeholder="Url" />
+            </div>
+
+            <div class="shorten-link-btn">
+                <button type="submit">Shorten Url</button>
+            </div>
+        </div>
+    </form>
+
+    <div className="new-shortened-url">
+        {{#if shortLink}}
+            <h2>Your Shortened Url is:</h2>
+            <a href="{{originalLink}}" target="_blank">{{shortLink}}</div>
+        {{/if}}
+    </div>
+    
+</div>
